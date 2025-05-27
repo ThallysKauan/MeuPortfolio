@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <title>Thallys Kauan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="social">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></i></a>
+        </div>
+        <ul class="linksnav">
+            <li><a href="#inicio">ínicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+
+        </ul>
+        <a href="arquivo.pdf" download class="btn-download">Currículo <i class="fa-solid fa-download" style="color: #0a0c24; font-size: 1.2rem; margin-left: 5px;"></i></a>
+
+    </nav>
+
+    <main>
+        <section id="inicio" class="partone">
+        <!-- vídeo de fundo -->
+        <video autoplay muted loop playsinline>
+            <source src="./video1.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+
+        <!-- conteúdo por cima -->
+        <div class="content">
+            <a class="instagram" href=""><img class="instragram" src="./imgs/instagram.png"></a>
+            
+            <ul class="used">
+                <li class="tooltip"><img src="./imgs/html-5.png"><span>HTML5</span></li>
+                <li class="tooltip"><img src="./imgs/css-3.png"><span>CSS3</span></li>
+                <li class="tooltip"><img src="./imgs/js.png"><span>JavaScript</span></li>
+                <li class="tooltip"><img src="./imgs/php (1).png"><span>PHP</span></li>
+                <li class="tooltip"><img src="./imgs/mysql.png"><span>MySQL</span></li>
+                <li class="tooltip"><img src="./imgs/api.png"><span>API Mercado Pago</span></li>
+
+            </ul>
+
+            <div class="desenvolvimento">
+                <div class="ball"></div>
+                <p class="desen">Em desenvolvimento</p>
+
+            </div>
+            <div class="marca">
+                <span class="act"></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="logoandtitle">
+
+                <img src="./LogoNBG.svg">
+                <h2>blitzarena</h2>
+                <p>Plataforma em desenvolvimento focada em campeonatos de jogos FPS, já com cinco versões de front-end lançadas e em constante evolução. Conta com uma parceria estratégica com uma página no Instagram com mais de 255 mil seguidores, 
+                    visando oferecer retorno financeiro não apenas ao vencedor, mas também aos demais participantes. Em testes, Não lançada ainda
+                </p>
+                <a href="https://blitzarena.com.br" class="cta-link">Conhecer a plataforma!</a>
+
+            </div>
+            
+        </div>
+        </section>
+        <section id="sobre" class="parttwo">
+            <h2>Sobre mim:</h2>
+            <p>Me chamo Thallys Kauan, Lorem ipsum, dolor sit amet consect
+                etur adipisicing elit. Quis vero eveniet
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat quo reprehenderit veritatis velit nihil unde assumenda, eveniet veniam nam minima minus sit sunt, recusandae fuga tempora eum deleniti! Vel?
+                eius tempore! Laborum numquam nam perferendis dolorem sit, deserunt adipisci similique animi ab odit possimus dolore, illo sunt placeat.</p>
+        
+        </section>
+        <buceta id="habilidades" class="partthree">
+            <h2>Minhas Habilidades</h2>
+            <ul>
+                <li class="tooltip"><img src="./imgs/html-5.png"><span>HTML5</span></li>
+                <li class="tooltip"><img src="./imgs/css-3.png"><span>CSS3</span></li>
+                <li class="tooltip"><img src="./imgs/js.png"><span>JavaScript</span></li>
+                <li class="tooltip"><img src="./imgs/php (1).png"><span>PHP</span></li>
+                <li class="tooltip"><img src="./imgs/mysql.png"><span>MySQL</span></li>
+
+            </ul>
+        </buceta>
+
+    </main>
+<script>
+  document.querySelectorAll('.used img').forEach(img => {
+    // Gera um valor aleatório entre 3.00 e 5.00 segundos
+    const duration = (Math.random() * 2 + 3).toFixed(2);
+    img.style.animationDuration = `${duration}s`;
+  });
+</script>
+<script>
+document.querySelectorAll('.linksnav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+
+    const startY = window.pageYOffset;
+    const endY = targetElement.getBoundingClientRect().top + startY;
+    const distance = endY - startY;
+    const duration = 600; // duração em ms
+    let startTime = null;
+
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      // Ease in-out cubic (suave)
+      const ease = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startY + distance * ease);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  });
+});
+
+</script>
+
+<script src="https://kit.fontawesome.com/3e984e6f99.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Thallys Kauan. Todos os direitos reservados.</p>
+    <div class="social-links">
+      <a href="https://github.com/seuusuario" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="contato.thallyskauan@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+
+</html>

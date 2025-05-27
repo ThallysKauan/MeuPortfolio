@@ -1,0 +1,100 @@
+@media (max-width: 2560px) {
+    .emalta {
+        margin-top: 20%;
+    }
+}
+@media (max-width: 1450px) {
+    .emalta {
+        margin-top: 35%;
+    }
+}
+@media (max-width: 800px) {
+    .emalta {
+        margin-top: 65%;
+    }
+}
+@media (max-width: 450px) {
+    .emalta {
+        margin-top: 85%;
+    }
+}
+@media (max-width: 1024px) {
+    .navbar_netflix img {
+        width: 15%;
+    }
+}
+@media (max-width: 1024px) {
+    .part_one {
+        display: flex
+;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+}
+@media (max-width: 2260px) {
+    .navbar_netflix {
+        height: -11vh;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+        display: flex
+;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 2% 4%;
+    }
+}
+@media (max-width: 425px) {
+    .navbar_netflix img {
+        width: 35%;
+    }
+}
+@media (max-width: 768px) {
+    .languageandbtn {
+        display: flex
+;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+    }
+}
+@media (max-width: 500px) {
+    .languageandbtn {
+        display: flex
+;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+    }
+}
+@media (max-width: 1024px) {
+    .inputandtext input {
+        margin-top: 5%;
+        font-family: 'Montserrat', sans-serif;
+        padding: 4%;
+        border-radius: 3px;
+        width: 100%;
+        background-color: rgba(22, 22, 22, 0.7);
+        border: 1px solid rgba(128, 128, 128, 0.7);
+    }
+}
+@media (max-width: 1024px) {
+    .btn_vamosla {
+        margin-top: 5%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        display: flex
+;
+        align-items: center;
+        justify-content: center;
+        padding: 3.5% 8%;
+        background-color: #e30916;
+        border-radius: 5px;
+        color: #ffffff;
+        border: none;
+    }
+}

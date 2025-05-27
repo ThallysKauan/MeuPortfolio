@@ -1,0 +1,418 @@
+
+@font-face {
+    font-family: 'geom';
+    src: url('./xxii-geom-bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'netflixm';
+    src: url('./NetflixSans-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'netflixb';
+    src: url('./NetflixSans-Medium.otf') format('opentype');
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.act{
+    background-color: #f05408 !important;
+}
+.navbar i{
+    margin: 5px;
+    font-size: 2rem;
+    color: #fff;
+}
+.linksnav{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+list-style-type: none;
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+align-items: center;
+height: 100px; /* ou outro valor fixo */
+width: 300px;
+
+}
+.instagram{
+    bottom: 4%;
+    right: 2%;
+    position: absolute;
+    animation: float 3s ease-in-out;
+
+}
+.instagram img{
+    width: 45px;
+
+}
+.linksnav a {
+    text-decoration: none;
+color: #fff;
+font-family: 'netflixb';
+}
+.linksnav li{
+    cursor: pointer;
+    flex: 1;
+}
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  background: transparent;
+}
+.partone {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Vídeo como fundo */
+.partone video {
+  position: fixed; /* fixa o vídeo no fundo da tela */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.2); /* escurece o vídeo */
+  pointer-events: none; /* impede cliques sobre o vídeo */
+}
+
+/* Conteúdo sobre o vídeo */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: relative;
+  margin-top: 75px;
+  height: calc(100% - 75px);
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+.navbar{
+    position: fixed;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 75px;
+    background-color: #6f393908;
+    backdrop-filter: blur(5px);
+}
+.marca {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    display: flex
+;
+    flex-direction: column;
+}
+.marca span{
+    padding: 1px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 5px auto;
+}
+.logoandtitle{
+position: relative;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    /* justify-content: center; */
+    width: 50%;
+    height: 60%;
+}
+.logoandtitle img{
+    width: 100px;
+}
+.logoandtitle h2{
+    font-family: 'geom';
+}
+.logoandtitle p {
+    margin-top: 5%;
+    width: 80%;
+    font-family: 'netflixm';
+}
+.cta-link {
+    position: absolute;
+    bottom: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-family: 'netflixb';
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ff6b00 0%, #ff9500 50%, #ffc400 100%);
+    box-shadow: 0 0 20px rgba(255, 145, 0, 0.7), 0 0 40px rgba(255, 102, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+
+.cta-link::before {
+    content: '';
+    display: inline-block;
+    order: +1;
+    width: 16px;
+    height: 16px;
+    background-image: url('./imgs/seta-direita.png'); /* ou .png */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ 
+.cta-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 170, 0, 0.8), 0 0 60px rgba(255, 94, 0, 0.5);
+    background: linear-gradient(135deg, #ff9500 0%, #ff6b00 50%, #ff3c00 100%);
+}
+
+.desenvolvimento{
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #0a0c245e;
+    backdrop-filter: blur(5px);
+}
+.desenvolvimento {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 40px; /* começa como bolinha */
+    height: 40px;
+    border-radius: 50px;
+    background-color: #0a0c245e;
+    backdrop-filter: blur(5px);
+    padding: 5px 10px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    transition: width 0.4s ease;
+    cursor: pointer;
+}
+
+.desenvolvimento:hover {
+    width: 200px; /* expande ao hover */
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip img {
+    width: 55px;
+    transition: transform 0.3s ease;
+}
+
+.tooltip:hover img {
+    transform: scale(1.1);
+}
+
+.tooltip span {
+    position: absolute;
+    bottom: -30px; /* aparece abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000cc;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    font-family: 'netflixb';
+    pointer-events: none;
+    z-index: 2;
+}
+
+.tooltip:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+.ball {
+    background-color: #f05408;
+    padding: 5px;
+    border-radius: 50%;
+    animation: pisc 1s ease infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pisc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.desen {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 10px;
+    font-family: 'netflixb';
+    white-space: nowrap;
+    transition: opacity 0.3s ease 0.2s; /* atraso leve para suavizar */
+}
+
+.desenvolvimento:hover .desen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.used{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    z-index: 3;
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+    gap: 15px;
+    transform: translateY(-50%);
+}
+.used li {
+    margin-left: 10px;
+}
+.used img {
+    width: 45px;
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+.btn-download{
+    font-family: 'netflixb';
+    font-size: 1rem;
+    color: #0a0c24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+.parttwo{
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #fff;
+
+}
+.parttwo p{
+    margin-top: 20px;
+    text-align: center;
+    width: 50%;
+    font-family: 'comfortaa';
+}
+.partthree{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0a0c24;
+    padding: 150px 50px;
+    width: 100%;
+    font-family: 'netflixb';
+    color: #fff;
+}
+.partthree img{
+    width: 85px;
+}
+.partthree ul{
+    margin-top: 5%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 40%;
+}
+.partthree ul li{
+
+}
+.partthree h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff; /* cor vibrante */
+  letter-spacing: 2px;
+}
+
+.footer {
+  background-color: #000000;
+  color: #ddd;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer .social-links {
+  margin-top: 1rem;
+}
+
+.footer .social-links a {
+  color: #ddd;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #1abc9c;
+}
+.buceta{
+    background-color: #ff0000;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    z-index: 999999999999;
+
+}
